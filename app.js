@@ -37,7 +37,7 @@ Array.from(pages).forEach((page, idx) => {
 previous.addEventListener("click", () => {
     deactivate()
     hideImages()
-    if (imgCount >= images.length - 1) imgCount - 1
+    if (imgCount <= 0) imgCount = images.length - 1
     else imgCount -= 1
 
     images[imgCount].style.opacity = '1'
